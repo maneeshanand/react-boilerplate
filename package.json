@@ -1,8 +1,8 @@
 {
-  "name": "ew-react",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "React-flux boilerplate",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001"
