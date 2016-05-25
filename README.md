@@ -1,6 +1,8 @@
 **description**
 
-super boilerplate react-flux app using `fluxxed_up` and `hot-laoding` enabled in dev.  have fun!
+super boilerplate react-flux app using `fluxxed_up` and `hot-loading` enabled in dev.
+
+have fun!
 
 **setup**
 
