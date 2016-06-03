@@ -5,6 +5,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <h3>Home</h3>
+        <p>Welcome to react-boilerplate</p>
       </div>
     )
   }

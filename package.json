@@ -4,7 +4,8 @@
   "description": "React-flux boilerplate",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/karma start  --single-run --browsers Chrome",
+    "test-watch": "./node_modules/.bin/karma start --browsers Chrome",
     "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001"
   },
   "author": "Maneesh Anand maneesh.work@gmail.com",
@@ -12,13 +13,14 @@
   "dependencies": {
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.4",
-    "babel-plugin-add-module-exports": "^0.1.2",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-class-properties": "^6.5.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
     "config": "^1.14.0",
+    "css-loader": "^0.23.1",
     "flux": "^2.1.1",
     "fluxxed_up": "git+https://github.com/everplans/fluxxed_up#dev",
     "history": "^2.0.0",
@@ -28,9 +30,22 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.0",
     "superagent": "^1.8.0-beta.2",
     "variant": "0.0.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-chai-plugins": "^0.7.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jquery": "^0.1.0",
+    "karma-mocha": "^1.0.1",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.5.3"
   }
 }

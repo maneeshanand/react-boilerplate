@@ -7,19 +7,26 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015'],
-          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+          presets: ['react', 'es2015', 'stage-1'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy', 'add-module-exports']
         }
       },
       {
         test: /\.css$/,
         loader: 'style!css'
+      },
+      {
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader?paths=node_modules/&resolve url'
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js']
   },
   output: {
     filename: 'app.min.js'
