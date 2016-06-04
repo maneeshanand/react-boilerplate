@@ -22,14 +22,9 @@ export function buildRequest(method, data, actionType) {
     .set('Authorization', sessionStorage.getItem('accessToken'))
     .end((error, res) => {
       if (res) {
-        var resData
-        if (res.error)
-          resData = getErrors(res)
-        else
-          resData = JSON.parse(res.text)
         Dispatcher.dispatch({
           actionType,
-          data: resData
+          data: res.error ? getErrors(res) : JSON.parse(res.text)
         })
       }
     })
