@@ -1,7 +1,7 @@
 import assign from 'object-assign'
 import KeyMirror from 'keymirror'
 import { ActionPrototype, Dispatcher } from 'fluxxed_up'
-import { fetch } from '../lib/webApi'
+import { fetch, post } from '../lib/webApi'
 
 var UserActions = assign({}, ActionPrototype, {
   Types: KeyMirror({
