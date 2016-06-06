@@ -1,9 +1,13 @@
-var React = require('react')
+import React from 'react'
 
-module.exports = React.createClass({
-  getInitialState: function() { return {name: 'Guest'} },
-  changeName: function() { this.setState({name: this.refs.userName.value}) },
-  render: function() {
+export default class Home extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {name: 'Guest'}
+    this.changeName = this.changeName.bind(this)
+  }
+  changeName() { this.setState({name: this.refs.userName.value}) }
+  render() {
     return (
       <div>
         <h3>Home</h3>
@@ -14,4 +18,4 @@ module.exports = React.createClass({
       </div>
     )
   }
-})
+}
