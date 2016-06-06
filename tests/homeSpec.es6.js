@@ -13,10 +13,8 @@ describe('Home', () => {
     rig.boltOff() // clean up the test component
   })
 
-  it('is true', () => {
-    // trivial expectation just to see how it works
-    expect(true).to.equal(true)
-  })
+  // trivial expectation just to see how it works
+  it('is true', () => expect(true).to.equal(true))
 
   it('shows welcome message', () => {
     expect(rig.domNode.find('h3').text()).to.match(/Home/)

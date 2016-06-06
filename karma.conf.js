@@ -1,10 +1,9 @@
 // Karma configuration
 // Generated on Mon Feb 16 2015 17:26:59 GMT-0500 (EST)
 
-//var bootstrap = require('./karma_plugins/bootstrap.js')
 var webpackConfig = Object.create(require('./webpack.config.js'));
 webpackConfig.devtool = 'inline-source-map';
-webpackConfig.entry = {} ;
+webpackConfig.entry = {};
 webpackConfig.watch = true;
 
 module.exports = function(config) {
@@ -25,7 +24,6 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     singleRun: false,
-    //plugins: [webpack, 'karma-*'],
     browserNoActivityTimeout: 100000,
     client: {
       mocha: {
