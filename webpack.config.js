@@ -7,12 +7,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, 
+        exclude: [/node_modules\/(?!fluxxed_up)/],
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-1'],
-          plugins: ['transform-class-properties']
+          plugins: ['transform-class-properties', 'add-module-exports']
         }
       },
       {
