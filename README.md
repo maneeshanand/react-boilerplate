@@ -1,6 +1,11 @@
 **description**
 
-super boilerplate react-flux app using `fluxxed_up` and `hot-loading` enabled in dev.
+super boilerplate react-flux app with `hot-loading` enabled in dev. Uses:
+  * `babel` for `es2015`, `stage-1` syntax (but `es5` works just fine).
+  * `weback`
+  * `karma` + `mocha` + `chai` for testing
+  * `fluxxed_up` 
+  * `stylus` for css preprocessing 
 
 have fun!
 
