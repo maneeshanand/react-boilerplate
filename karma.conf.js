@@ -11,8 +11,7 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     webpack: webpackConfig,
-    //frameworks: ['es5-shim', 'mocha', 'chai', 'sinon-chai', 'chai-jquery', 'jquery-2.1.0', 'bootstrap'],
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
     preprocessors: {
      './tests/**/*.js': ['webpack'],
     './main/**/*.js': ['webpack']
