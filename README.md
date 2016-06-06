@@ -25,3 +25,6 @@ Karma using mocha, and the fluxxed_up TestRig are included. Check examples for
 how to write tests.
 
 `npm run test-watch`
+
+**es6 or es5**
+There are examples for both styles, feel free to try either! 
