@@ -1,5 +1,4 @@
 /* global bootstrappy stuff, just to get it to work */
-if (!window.$) window.$ = require('jquery')
 var React = require('react')
 
 var Home =  require('../main/components/home/Home.react')
