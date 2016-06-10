@@ -1,5 +1,5 @@
-var webpack = require('webpack')
 var config = require('config')
+var webpack = require('webpack')
 
 module.exports = {
   devtool: config.get('NODE_ENV') ? 'inline-sourcemap' : null,
@@ -24,9 +24,9 @@ module.exports = {
   output: {
     filename: 'app.min.js'
   },
-  plugins: config.get('NODE_ENV') ? [] : [
+  plugins: config.get('NODE_ENV') === 'development' ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
+    new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
   ]
 }
