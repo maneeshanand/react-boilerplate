@@ -34,7 +34,7 @@ how to write tests.
 **es6 or es5**
 There are examples for both styles, feel free to try either!
 
-** Where to start **
+**Where to start**
 `react-router` powers routes. Checkout `/main/lib/routes` to add your own.
 
 Or just render a component directly on the DOM, check that out over in `./app.js`
