@@ -32,4 +32,11 @@ how to write tests.
 `npm run test-watch`
 
 **es6 or es5**
-There are examples for both styles, feel free to try either! 
+There are examples for both styles, feel free to try either!
+
+** Where to start **
+`react-router` powers routes. Checkout `/main/lib/routes` to add your own.
+
+Or just render a component directly on the DOM, check that out over in `./app.js`
+
+Start by modifying `/main/components/home/Home.react.js`
