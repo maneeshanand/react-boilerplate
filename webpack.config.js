@@ -7,15 +7,22 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
-        exclude: /node_modules/,
+        test: /\.js$/,
+        exclude: [/node_modules\/(?!fluxxed_up)/],
         loader: 'babel-loader'
       },
       {
         test: /\.css$/,
         loader: 'style!css'
+      },
+      {
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader?paths=node_modules/&resolve url'
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js']
   },
   output: {
     filename: 'app.min.js'
