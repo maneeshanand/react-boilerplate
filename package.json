@@ -4,7 +4,7 @@
   "description": "React-flux boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maneeshnycda/react-boilerplate"
+    "url": "https://github.com/everplans/react-boilerplate"
   },
   "main": "app.js",
   "scripts": {
