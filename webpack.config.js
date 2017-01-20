@@ -1,5 +1,5 @@
-var webpack = require('webpack')
 var config = require('config')
+var webpack = require('webpack')
 
 module.exports = {
   devtool: config.get('NODE_ENV') ? 'inline-sourcemap' : null,
@@ -7,13 +7,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/, 
+        test: /\.js$/,
         exclude: [/node_modules\/(?!fluxxed_up)/],
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-1'],
-          plugins: ['transform-class-properties', 'add-module-exports']
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
@@ -31,9 +27,9 @@ module.exports = {
   output: {
     filename: 'app.min.js'
   },
-  plugins: config.get('NODE_ENV') ? [] : [
+  plugins: config.get('NODE_ENV') === 'development' ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
+    new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
   ]
 }

@@ -5,7 +5,7 @@ import Home from '../components/home/Home.react'
 
 const routes = (
   <Router history={hashHistory}>
-    <Route path='/'component={Home} />
+    <Route path='/' component={Home} />
   </Router>
 )
 
